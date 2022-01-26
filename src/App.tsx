@@ -1,6 +1,7 @@
 import { TodoItem } from "./components/TodoItem";
 
 import './App.css';
+import { TodoGrid } from "./components/TodoGrid";
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
       <h1>Home</h1>
       <hr />
 
-      <TodoItem />
+      <TodoGrid />
     </div>
   );
 }
