@@ -32,6 +32,7 @@ export const useFetch = ( url: string, method: string ) => {
     }, []);
 
     useEffect(() => {
+        const api_key: any = process.env.REACT_APP_KEY_TODO; // Revisar tipado
         setState({
             data: null,
             loading: true,
@@ -41,7 +42,7 @@ export const useFetch = ( url: string, method: string ) => {
         fetch( url, { // ! Crear un folder helper y crear un metodo para esto
             method,
             headers: { // Put the key in an environment file
-                'X-Api-Key': 'PMAK-5ef63db179d23c004de50751-10300736bc550d2a891dc4355aab8d7a5c'
+                'X-Api-Key': api_key
             }
         })
             .then( resp => resp.json() )

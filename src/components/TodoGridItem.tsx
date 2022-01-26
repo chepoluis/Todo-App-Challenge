@@ -16,6 +16,8 @@ export const TodoGridItem = ( { description, dueDate, isComplete }: TodoGridItem
             <p>{ description }</p>
             <p>{ formatDate(dueDate) }</p>
             <p>{ isComplete.toString() }</p>
+
+            <button className='btn btn-outline-primary'>Complete(icon)</button>
         </div>
     );
 };
