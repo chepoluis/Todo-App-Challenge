@@ -1,22 +1,51 @@
 import { TodoGridItem } from "./TodoGridItem";
 import { useFetch } from '../hooks/useFetch';
 
+import { useEffect, useState } from "react";
+import { getTodos } from '../helpers/getTodos';
+
 import './styles/TodoGrid.css';
 
 export const TodoGrid = () => {
-    const { loading, data: todos } = useFetch('https://944ba3c5-94c3-4369-a9e6-a509d65912e2.mock.pstmn.io/get', 'GET');
-    // const todos = !!data && data;
-    console.log(todos)
+    const [todos, setTodos] = useState<any>([]);
+    const [loading, setLoading] = useState(true);
 
+    /**
+     * No usar el useFetch, usar getTodos y un useState, para guardar los objetos y pasarlos como props a TodoGridItem
+     */
+
+    useEffect(() => {
+        setLoading(true);
+
+        getTodos('GET').then((todos) => {
+            setTodos(todos);
+
+            setLoading(false);
+        })
+    }, []);
+
+    const sortByDueDate = ( ) => {
+        setTodos((todos: []) => {
+            console.log(todos)
+            // todos.sort((a.due))
+        })
+    }
+    
     const renderCards = () => {
         return todos?.map((t: any) => { // Check interface
             // return <Card key={card.id} card={card} />;
-            return <TodoGridItem key={ t.id } {...t} />
+            return <TodoGridItem key={ t.id } {...t} setTodos={ setTodos } />
         });
     };
 
     return (
-        <div>
+        <>
+            {/* <button onClick={ sortByDueDate }>
+                Order by due date
+            </button> */}
+            <div className="header text-center">
+                <h3>Todo App</h3>
+            </div>
             {
                 loading ?
                     <div className='alert alert-info text-center'>
@@ -24,16 +53,12 @@ export const TodoGrid = () => {
                     </div>
                 :
                 <div className="todo-grid">
+                    
                     {
                         renderCards()
-                        // todos.map(() => {
-                        //     return (
-                        //         <TodoGridItem />
-                        //     )
-                        // })
                     }
                 </div>
             }
-        </div>
+        </>
     );
 };
