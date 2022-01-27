@@ -21,4 +21,13 @@ describe('Test in getTodos', () => {
         expect( todos[0] ).toEqual( exampleObj );
     });
     
+    test('should return status: success with a correcet PATCH request', async () => {
+        const exampleObj = {
+            status: 'success'
+        }
+
+        const todos = await getTodos('PATCH', 1);
+        
+        expect( todos ).toEqual( exampleObj );
+    });
 })
