@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test in <TodoGrid /> component should show the component 1`] = `
+<Fragment>
+  <div
+    className="header text-center"
+  >
+    <h3>
+      Todo App
+    </h3>
+  </div>
+  <div
+    className="alert alert-info text-center"
+  >
+    Loading...
+  </div>
+</Fragment>
+`;

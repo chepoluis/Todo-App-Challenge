@@ -1,5 +1,14 @@
-/* .todo-grid {
+.header{
+    height: 100px;
+    width: 100%;
+    background-color : #b2c8eb;
+    padding-top: 30px;
+}
+
+.todo-grid {
+    height: 600px;
+    width: 100%;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-} */
+    padding : 40px 100px;
+}

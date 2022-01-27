@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test in <TodoGridItem /> component should show the component 1`] = `
+<div
+  className="card-wrapper mr-5"
+  style={
+    Object {
+      "marginBottom": "15px",
+      "marginRight": "20px",
+    }
+  }
+>
+  <div
+    className="card-top"
+    style={
+      Object {
+        "backgroundColor": "#F9D288",
+      }
+    }
+  />
+  <div
+    className="task-holder"
+  >
+    <span
+      className="card-header"
+      style={
+        Object {
+          "backgroundColor": undefined,
+          "borderRadius": "10px",
+        }
+      }
+    >
+      Not completed
+    </span>
+    <p
+      className="mt-3"
+    />
+    <p />
+    <div
+      style={
+        Object {
+          "bottom": "20px",
+          "position": "absolute",
+          "right": "20px",
+        }
+      }
+    >
+      <i
+        className="far fa-ballot-check mr-3"
+        onClick={[Function]}
+        style={
+          Object {
+            "color": "#93f764",
+            "cursor": "pointer",
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;
