@@ -43,7 +43,12 @@ export const TodoGridItem = ( props: any ) => {
                 }
 
                 <div style={{"position": "absolute", "right" : "20px", "bottom" : "20px"}}>
-                    <i className = "far fa-ballot-check mr-3" style={{"color" : colors[4].primaryColor, "cursor" : "pointer"}} onClick={ complete }></i>
+                    <button
+                        onClick={ complete }
+                        className= { isComplete ? 'btn btn-outline-danger' : 'btn btn-outline-primary' }
+                    >
+                        { isComplete ? 'Uncomplete' : 'Complete' }
+                    </button>
                 </div>
             </div>
         </div>

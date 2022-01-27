@@ -45,16 +45,12 @@ exports[`Test in <TodoGridItem /> component should show the component 1`] = `
         }
       }
     >
-      <i
-        className="far fa-ballot-check mr-3"
+      <button
+        className="btn btn-outline-primary"
         onClick={[Function]}
-        style={
-          Object {
-            "color": "#93f764",
-            "cursor": "pointer",
-          }
-        }
-      />
+      >
+        Complete
+      </button>
     </div>
   </div>
 </div>
